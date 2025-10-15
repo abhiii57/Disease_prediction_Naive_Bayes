@@ -28,12 +28,12 @@ if "prediction" not in st.session_state:
     st.session_state.prediction = None
 
 # -------------------- App UI --------------------
-st.title("🩺 Disease Prediction App")
+st.title("🩺 Disease Prediction ")
 st.markdown(
     """
     Enter your **symptoms** separated by commas (e.g.  
     `fever, cough, fatigue`) and get an instant prediction  
-    based on your trained machine learning model.
+    based on our trained machine learning model.
     """
 )
 
@@ -62,7 +62,7 @@ if st.button("Predict Disease"):
 if st.session_state.prediction:
     st.success(f"🧬 **Predicted Disease:** {st.session_state.prediction}")
     st.markdown("---")
-    st.markdown("### 🩹 Tips")
+    st.markdown("### Note")
     st.info(
         "This prediction is based on symptom patterns from our dataset. "
         "Consult a medical professional for accurate diagnosis and treatment."
@@ -70,4 +70,4 @@ if st.session_state.prediction:
 
 # -------------------- Footer --------------------
 st.markdown("---")
-st.caption("Developed with ❤️ using Streamlit.")
+st.caption("Developed using Streamlit.")
